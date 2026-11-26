@@ -17,6 +17,7 @@ jobs:
           cache: maven
         }
 
+      - run: chmod +x mvnw
       - run: ./mvnw -B test
       - uses: actions/upload-artifact@v7
         if: always()
@@ -36,6 +37,7 @@ jobs:
           java-version: 17,
           cache: maven
         }
+      - run: chmod +x mvnw
       - run: ./mvmw -B package -DskipTests
       - uses: actions/upload-artifact@v7
         with: {
