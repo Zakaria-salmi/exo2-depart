@@ -38,7 +38,7 @@ jobs:
           cache: maven
         }
       - run: chmod +x mvnw
-      - run: ./mvmw -B package -DskipTests
+      - run: ./mvnw -B package -DskipTests
       - uses: actions/upload-artifact@v7
         with: {
           name: fablab-api,
